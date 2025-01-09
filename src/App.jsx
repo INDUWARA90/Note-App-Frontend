@@ -1,13 +1,21 @@
-import './App.css'
+import React from 'react'
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Login from "./Componets/Auth/Login/Login";
+import SignIn from "./Componets/Auth/SignIN/SignIn";
+
+import Home from "./Componets/Home/Home";
 
 function App() {
-
-
   return (
     <>
-      <h1 className='text-center text-4xl text-red-600'>Note APP</h1>
+       <Routes>
+          <Route path="/" element={<Login/>} />
+          <Route path="/signIn" element={<SignIn/>} />
+          <Route path="/home" element={<Home/>} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
