@@ -28,7 +28,7 @@ function AddNote() {
             .then((data) => {
                 console.log("note added:", data);
                 Swal.fire({
-                    title: "note Added Successful!",
+                    title: "Note Added Successful!",
                     icon: "success",
                 });
 
@@ -37,7 +37,7 @@ function AddNote() {
             .catch((error) => {
                 console.error("Error posting user:", error);
                 Swal.fire({
-                    title: "note Added Failed!",
+                    title: "Note Added Failed!",
                     icon: "error",
                     text: "There was an error while you adding your note. Please try again.",
                 });
@@ -48,13 +48,13 @@ function AddNote() {
     }
 
     return (
-        <div className='border-2 border-sky-500 w-[400px] h-[470px] rounded-md p-11'>
-            <h1 className='text-center text-2xl font-semibold'>Add Notes</h1>
+        <div className='border-2 border-sky-400 w-[400px] h-[500px] rounded-md p-11'>
+            <h1 className='text-white text-center text-4xl font-semibold mb-8'>ADD Notes</h1>
             <form action="" onSubmit={onSubmit} className='mt-4 grid grid-flow-row gap-7'>
 
                 <input type="text" name="heading"
                     placeholder='Enter Your Note Heading....'
-                    className='border-2 border-sky-400 w-full p-1 rounded-md'
+                     className="text-white font-medium border-2 p-2 rounded-md bg-transparent outline-none from-neutral-500"
                     required
                     value={heading}
                     onChange={(e)=>setHeading(e.target.value)}
@@ -62,12 +62,12 @@ function AddNote() {
 
                 <textarea name="note"
                     placeholder='Enter Your Note Here....'
-                    className='border-2 border-sky-400 w-full p-1 rounded-md h-[220px] resize-none'
+                    className='text-white font-medium border-2 p-2 rounded-md bg-transparent outline-none from-neutral-500 h-[220px] resize-none'
                     required
                     value={description}
                     onChange={(e)=>setDescription(e.target.value)}
                 />
-                <button type='submit' className='border-2 border-sky-500 rounded-md p-1'>ADD NOTE</button>
+                <button type='submit' className='text-white w-full p-3 rounded-md font-medium bg-black hover:opacity-80'>ADD NOTE</button>
             </form>
         </div>
     )

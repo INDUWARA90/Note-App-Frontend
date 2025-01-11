@@ -16,7 +16,10 @@ function Home() {
               <AddNote />
             </div>
             
-            <ShowNote />
+            <div className="mt-20">  
+                <h1 className='text-center text-white text-6xl font-semibold mb-14'>Your Notes</h1>
+                <ShowNote />
+            </div>
         </div>
 
       </div>
